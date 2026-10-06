@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD por CPF - Início</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="conteudo">
+            <a class="marca" href="/">CRUD <span>| Busca por CPF</span></a>
+            <nav class="menu">
+                <a href="/" class="ativo">Início</a>
+                <a href="/post/">Cadastrar</a>
+                <a href="/get/">Listar</a>
+                <a href="/put/">Editar</a>
+                <a href="/delete/">Excluir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Formulário! Protocolo HTTP - CRUD</h1>
+        <p class="subtitulo">Cadastro de pessoas com Node.js, Express e JSON Server. Escolha uma operação:</p>
+
+        <div class="grade-opcoes">
+            <a class="opcao post" href="/post/">
+                <span class="metodo post">POST</span>
+                <h3>Cadastrar</h3>
+                <p>Adicionar um novo registro com CPF e dados pessoais.</p>
+            </a>
+            <a class="opcao get" href="/get/">
+                <span class="metodo get">GET</span>
+                <h3>Listar</h3>
+                <p>Ver todos os registros e filtrar por CPF.</p>
+            </a>
+            <a class="opcao put" href="/put/">
+                <span class="metodo put">PUT</span>
+                <h3>Editar</h3>
+                <p>Buscar um registro pelo CPF e atualizar os dados.</p>
+            </a>
+            <a class="opcao delete" href="/delete/">
+                <span class="metodo delete">DELETE</span>
+                <h3>Excluir</h3>
+                <p>Buscar um registro pelo CPF e removê-lo.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>Programação para Internet — UMC</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD por CPF - Excluir (DELETE)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="conteudo">
+            <a class="marca" href="/">CRUD <span>| Busca por CPF</span></a>
+            <nav class="menu">
+                <a href="/">Início</a>
+                <a href="/post/">Cadastrar</a>
+                <a href="/get/">Listar</a>
+                <a href="/put/">Editar</a>
+                <a href="/delete/" class="ativo">Excluir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1><span class="metodo delete">DELETE</span>Excluir pessoa</h1>
+        <p class="subtitulo">Busque o registro pelo CPF, confira os dados e confirme a exclusão.</p>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <!-- 1) Busca por CPF -->
+        <form id="formBusca" class="cartao busca" autocomplete="off">
+            <div class="campo">
+                <label for="cpf">CPF do registro</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+            </div>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- 2) Ficha do registro encontrado + confirmação -->
+        <section id="painel" class="cartao oculto">
+            <h2>Registro encontrado</h2>
+            <dl id="ficha" class="ficha"></dl>
+            <div class="acoes">
+                <button type="button" id="btnDeletar" class="botao vermelho">Deletar</button>
+                <button type="button" id="btnCancelar" class="botao secundario">Cancelar</button>
+            </div>
+        </section>
+
+        <div class="acoes">
+            <a href="/get/" class="botao secundario">Ver lista</a>
+        </div>
+    </main>
+
+    <footer>Programação para Internet — UMC</footer>
+
+    <script src="/delete/delete.js"></script>
+</body>
+</html>

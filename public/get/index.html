@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD por CPF - Listar (GET)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="conteudo">
+            <a class="marca" href="/">CRUD <span>| Busca por CPF</span></a>
+            <nav class="menu">
+                <a href="/">Início</a>
+                <a href="/post/">Cadastrar</a>
+                <a href="/get/" class="ativo">Listar</a>
+                <a href="/put/">Editar</a>
+                <a href="/delete/">Excluir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1><span class="metodo get">GET</span>Dados cadastrais</h1>
+        <p class="subtitulo">Todos os registros salvos no db.json. Use a busca para filtrar por CPF.</p>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <form id="formBusca" class="cartao busca" autocomplete="off">
+            <div class="campo">
+                <label for="cpfBusca">Buscar por CPF</label>
+                <input type="text" id="cpfBusca" placeholder="000.000.000-00" maxlength="14">
+            </div>
+            <button type="submit">Buscar</button>
+            <button type="button" id="btnTodos" class="botao secundario">Mostrar todos</button>
+        </form>
+
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>E-mail</th>
+                        <th>Idade</th>
+                        <th>Telefone</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>RG</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo">
+                    <tr><td class="vazio" colspan="13">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="contador" class="contador"></p>
+
+        <div class="acoes">
+            <a href="/post/" class="botao verde">+ Novo cadastro</a>
+        </div>
+    </main>
+
+    <footer>Programação para Internet — UMC</footer>
+
+    <script src="/get/get.js"></script>
+</body>
+</html>
